@@ -8,8 +8,7 @@ tasks:
     echo "ALLOWED_HOSTS = ['*']" >> bakerydemo/settings/local.py &&
     echo "DJANGO_SETTINGS_MODULE=bakerydemo.settings.local" > .env &&
     python3 manage.py migrate &&
-    python3 manage.py load_initial_data &&
-    echo "from django.contrib.auth import get_user_model; get_user_model().objects.create_superuser('admin', '', 'admin')" | python3 manage.py shell
+    python3 manage.py load_initial_data
   command: >
     python3 manage.py runserver 0.0.0.0:8080
 github:
