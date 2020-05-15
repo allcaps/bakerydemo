@@ -1,0 +1,17 @@
+ports:
+- port: 8080
+  onOpen: open-preview
+tasks:
+- init: >
+    python3 -m pip install -r requirements.txt &&
+    cp bakerydemo/settings/local.py.example bakerydemo/settings/local.py &&
+    echo "ALLOWED_HOSTS = ['*']" >> bakerydemo/settings/local.py &&
+    echo "DJANGO_SETTINGS_MODULE=bakerydemo.settings.local" > .env &&
+    python3 manage.py migrate &&
+    python3 manage.py load_initial_data &&
+    echo "from django.contrib.auth import get_user_model; get_user_model().objects.create_superuser('admin', '', 'admin')" | python3 manage.py shell
+  command: >
+    python3 manage.py runserver 0.0.0.0:8080
+github:
+    prebuilds:
+        pullRequestsFromForks: true
