@@ -1,8 +1,6 @@
 Wagtail demo project
 =======================
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/allcaps/bakerydemo)
-
 This is a demonstration project for the amazing [Wagtail CMS](https://github.com/wagtail/wagtail).
 
 The demo site is designed to provide examples of common features and recipes to introduce you to Wagtail development. Beyond the code, it will also let you explore the admin / editorial interface of the CMS.
@@ -40,6 +38,15 @@ This demo is aimed primarily at developers wanting to learn more about the inter
 
 If you're new to Python and/or Django, we suggest you run this project on a Virtual Machine using Vagrant or Docker (whichever you're most comfortable with). Both Vagrant and Docker will help resolve common software dependency issues. Developers more familiar with
 virtualenv and traditional Django app setup instructions should skip to [Setup with virtualenv](#setup-with-virtualenv).
+
+Setup with GitPod
+-----------------
+
+Launch development environment and Wagtail CMS Bakery Demo site with a single click.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/allcaps/bakerydemo)
+
+Go to  `/admin/` and login with the credentials ``admin / changeme``.
 
 Setup with Vagrant
 ------------------
